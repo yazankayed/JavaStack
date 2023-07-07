@@ -3,16 +3,16 @@ import java.util.ArrayList;
 public class Order {
     private String name;
     private boolean ready;
-    private ArrayList<Item> items;
+    private ArrayList<Items> items;
 
     public Order() {
         this.name = "Guest";
-        this.items = new ArrayList<Item>();
+        this.items = new ArrayList<Items>();
     }
 
     public Order(String name) {
         this.name = name;
-        this.items = new ArrayList<Item>();
+        this.items = new ArrayList<Items>();
     }
 
     public String getName() {
@@ -31,11 +31,11 @@ public class Order {
         this.ready = ready;
     }
 
-    public ArrayList<Item> getItems() {
+    public ArrayList<Items> getItems() {
         return this.items;
     }
 
-    public void addItem(Item item) {
+    public void addItem(Items item) {
         this.items.add(item);
     }
 
