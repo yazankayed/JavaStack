@@ -10,7 +10,10 @@ public class Device {
         System.out.println("The remaining Battery is = "+this.battery);
 
     }
-
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
 
 

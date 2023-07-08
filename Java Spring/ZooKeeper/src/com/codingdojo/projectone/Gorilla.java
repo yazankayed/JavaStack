@@ -1,3 +1,4 @@
+package com.codingdojo.projectone;
 
 public class Gorilla extends Mammal {
 	public Gorilla() {

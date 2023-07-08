@@ -1,4 +1,4 @@
-
+package com.codingdojo.projectone;
 public class ZooKeeperTest {
 
 	public static void main(String[] args) {

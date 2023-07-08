@@ -1,3 +1,5 @@
+package com.codingdojo.projectone;
+
 
 public class Bat extends Mammal {
 	public Bat() {
