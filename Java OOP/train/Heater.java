@@ -1,6 +1,6 @@
 // inside of Heater.java
-public class Heater implements ACPowerable,Comparable, {
-
+public class Heater implements ACPowerable {
+// ,Comparable
     public Integer fanSpeedPercent = 0;
     public Integer heatSettingPercent = 0;
     public Boolean isPluggedIn = false;
@@ -48,14 +48,14 @@ public class Heater implements ACPowerable,Comparable, {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'unPlug'");
     }
-
-    @Override
-    public int compareTo(Object o) {
-        if(o isInsatanceOf user){
-            User u =(User) o;
-
-        }
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
-    }
 }
+//     @Override
+//     public int compareTo(Object o) {
+//         if(o isInsatanceOf user){
+//             User u =(User) o;
+
+//         }
+//         // TODO Auto-generated method stub
+//         throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+//     }
+// }
