@@ -29,8 +29,7 @@ public class HomeController {
 	
 	@RequestMapping("/counter")
 	public String counterRender(HttpSession session, Model model) {
-		Integer currentCount = (Integer) session.getAttribute("count");
-		model.addAttribute("countToShow", currentCount);
+		
 		return "counter.jsp";
 	}
 	

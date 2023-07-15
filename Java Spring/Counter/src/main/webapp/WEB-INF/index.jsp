@@ -8,6 +8,6 @@
 </head>
 <body>
    <h1>Welcome User!</h1>
-
+<a href="/counter">Counter Page</a>
 </body>
 </html>
