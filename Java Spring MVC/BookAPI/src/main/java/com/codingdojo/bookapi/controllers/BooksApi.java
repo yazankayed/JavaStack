@@ -42,10 +42,16 @@ public class BooksApi {
             @RequestParam(value="description") String desc,
             @RequestParam(value="language") String lang,
             @RequestParam(value="pages") Integer numOfPages) {
-        Book book = new Book(title, desc, lang, numOfPages);
+        Book ll=bookService.findBook(id);
+        ll.setTitle(title);
+        ll.setLanguage(lang);
+        ll.setDescription(desc);
+        ll.setNumberOfPages(numOfPages);
 
 
-        return bookService.createBook(book);
+
+
+        return bookService.updateBook(ll);
     }
 
     @RequestMapping(value="/api/books/{id}", method=RequestMethod.DELETE)
