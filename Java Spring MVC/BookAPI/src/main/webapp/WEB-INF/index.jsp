@@ -13,5 +13,14 @@
 </head>
 <body>
     <h1>Hello</h1>
+
+
+
+
+            <h1 ><c:out value="${specificbook.title}"/></h1>
+            <h2>Description: <c:out value="${specificbook.description}"/></h2>
+            <h2>Language: <c:out value="${specificbook.language}"/></h2>
+            <h2>Number of Pages: <c:out value="${specificbook.numberOfPages}"/></h2>
+
 </body>
 </html>
