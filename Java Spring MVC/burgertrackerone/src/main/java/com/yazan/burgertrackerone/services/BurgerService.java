@@ -22,6 +22,9 @@ public class BurgerService {
     public Burger createBurger(Burger b) {
         return burgerRepository.save(b);
     }
+    public Burger updateBurger(Burger p){
+        return burgerRepository.save(p);
+    }
     // retrieves a book
     public Burger findBurger(Long id) {
         Optional<Burger> optionalBurger = burgerRepository.findById(id);

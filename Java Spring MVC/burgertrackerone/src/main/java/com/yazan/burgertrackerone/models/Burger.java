@@ -37,7 +37,13 @@ public class Burger {
     public Burger() {
 
     }
-
+    public Burger(String burgerName, String restaurantName, String notes, Integer rating) {
+        this.burgerName = burgerName;
+        this.restaurantName = restaurantName;
+        this.notes = notes;
+        this.rating = rating;
+    }
+    // other getters and setters removed for brevity
     public Long getId() {
         return id;
     }
@@ -94,14 +100,6 @@ public class Burger {
         this.updatedAt = updatedAt;
     }
 
-    public Burger(String burgerName, String restaurantName, String notes, Integer rating) {
-        this.burgerName = burgerName;
-        this.restaurantName = restaurantName;
-        this.notes = notes;
-        this.rating = rating;
-    }
-
-    // other getters and setters removed for brevity
     @PrePersist
     protected void onCreate(){
         this.createdAt = new Date();

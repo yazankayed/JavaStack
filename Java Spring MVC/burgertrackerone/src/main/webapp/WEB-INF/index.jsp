@@ -24,12 +24,14 @@
     <th>Burger Name</th>
     <th>Restaurant Name</th>
     <th>Rating (out of 5)</th>
+    <th>Action</th>
   </tr>
   <c:forEach var="i" items="${allburgers}">
     <tr>
       <th><c:out value="${i.burgerName}"></c:out></th>
       <th><c:out value="${i.restaurantName}"></c:out></th>
       <th><c:out value="${i.rating}"></c:out></th>
+      <th> <a href="/burgers/edit/${i.id}">edit</a>  </th>
     </tr>
   </c:forEach>
 </table>
@@ -49,21 +51,15 @@
   </div>
   <div class="form-group">
     <label>Rating</label>
-    <form:select path="rating" class="form-control">
-      <option value="1">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </form:select>
+    <form:input path="rating" value="${specificBurger.rating}" type="number" class="form-control"/>
+
     <br>
     <form:errors path="rating"/>
 
   </div>
   <div class="form-group">
     <label>Note</label>
-    <form:textarea path="notes" class="form-control"></form:textarea>
+    <form:input path="notes" value="${specificBurger.notes}" type="text" class="form-control"/>
     <br>
     <form:errors path="notes"/>
   </div>

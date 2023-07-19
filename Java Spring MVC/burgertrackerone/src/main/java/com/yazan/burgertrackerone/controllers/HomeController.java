@@ -6,11 +6,8 @@ import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Book;
 import java.util.List;
 
 @Controller
@@ -29,6 +26,29 @@ public class HomeController {
         model.addAttribute("allburgers", allBurgers);
         return "index.jsp";
     }
+
+    @GetMapping("/burgers/edit/{id}")
+    public String edit(@PathVariable("id" ) Long id , Model model , @ModelAttribute("burger") Burger burger){
+        System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhh");
+        Burger specificBurger = burgerService.findBurger(id);
+        model.addAttribute("specificBurger", specificBurger);
+        return "edit.jsp";
+    }
+
+    @PostMapping("/updateBurger/{id}")
+    public String update(@PathVariable("id" ) Long id ,Model model, @Valid @ModelAttribute("burger") Burger burger, BindingResult result) {
+
+        Burger specificBurger = burgerService.findBurger(id);
+        model.addAttribute("specificBurger", specificBurger);
+        if (result.hasErrors()) {
+            return "edit.jsp";
+        } else {
+            burgerService.updateBurger(burger);
+            return "redirect:/";
+        }
+    }
+
+
 
     @PostMapping("/createburger")
     public String create(Model model, @Valid @ModelAttribute("burger") Burger burger, BindingResult result) {
