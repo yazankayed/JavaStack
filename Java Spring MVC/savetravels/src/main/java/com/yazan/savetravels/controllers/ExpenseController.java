@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.saeed.savetravels.models.Expense;
-import com.saeed.savetravels.services.ExpenseService;
+import com.yazan.savetravels.models.Expense;
+import com.yazan.savetravels.services.ExpenseService;
 
 @Controller
 public class ExpenseController {
