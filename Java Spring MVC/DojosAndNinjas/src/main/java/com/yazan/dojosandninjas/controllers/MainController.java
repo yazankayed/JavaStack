@@ -36,11 +36,12 @@ public class MainController {
 
     @GetMapping("/dojos/new")
     public String NewDojo(@ModelAttribute("dojo") Dojo dojo){
+
         return "index.jsp";
     }
 
     @PostMapping("/createdojo")
-    public String create(Model model, @Valid @ModelAttribute("dojo") Dojo dojo, BindingResult result) {
+    public String create( @Valid @ModelAttribute("dojo") Dojo dojo, BindingResult result) {
 
         if (result.hasErrors()) {
             return "index.jsp";
