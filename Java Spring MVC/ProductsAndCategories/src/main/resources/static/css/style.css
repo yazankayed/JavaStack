@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+    padding: 20px 100px;
+    width: 970px;
+    margin: auto;
+}
+tr, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+.errors {
+    color: indianred;
+}
+form > .label {
+    width: 100px;
+}
+.delete {
+    color: tomato;
+    text-decoration: none;
+    border: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.goBack, .expenseH1 {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.create {
+    color: white;
+    background-color: darkslateblue;
+    border-radius: 4px;
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+}
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
